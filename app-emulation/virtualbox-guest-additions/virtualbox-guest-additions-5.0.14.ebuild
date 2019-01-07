@@ -29,7 +29,7 @@ RDEPEND="X? ( ~x11-drivers/xf86-video-virtualbox-${PV}
 		x11-libs/libXdmcp
 		x11-libs/libSM
 		x11-libs/libICE
-		x11-proto/glproto )
+		x11-base/xorg-proto )
 	sys-apps/dbus
 	!!x11-drivers/xf86-input-virtualbox"
 DEPEND="${RDEPEND}
@@ -37,9 +37,7 @@ DEPEND="${RDEPEND}
 	>=dev-lang/yasm-0.6.2
 	sys-devel/bin86
 	sys-libs/pam
-	sys-power/iasl
-	X? ( x11-proto/renderproto )
-	!X? ( x11-proto/xproto )"
+	sys-power/iasl"
 
 BUILD_TARGETS="all"
 BUILD_TARGET_ARCH="${ARCH}"
