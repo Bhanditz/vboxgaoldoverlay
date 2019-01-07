@@ -33,8 +33,7 @@ DEPEND="${RDEPEND}
 	x11-libs/libX11
 	x11-libs/libXfixes
 	x11-libs/libXext
-	dri? (  x11-proto/xf86driproto
-		>=x11-libs/libdrm-2.4.5 )"
+	dri? (  >=x11-libs/libdrm-2.4.5 )"
 
 REQUIRED_USE=( "${PYTHON_REQUIRED_USE}" )
 
