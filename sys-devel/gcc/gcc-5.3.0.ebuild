@@ -42,4 +42,5 @@ src_prepare() {
 	is_crosscompile && EPATCH_EXCLUDE+=" 05_all_gcc-spec-env.patch"
 
 	toolchain_src_prepare
+	epatch "${FILESDIR}"/gcc-compile-with-newer-gcc.patch
 }
