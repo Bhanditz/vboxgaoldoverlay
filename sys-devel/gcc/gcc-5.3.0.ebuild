@@ -42,5 +42,7 @@ src_prepare() {
 	is_crosscompile && EPATCH_EXCLUDE+=" 05_all_gcc-spec-env.patch"
 
 	toolchain_src_prepare
+	pushd "${WORKDIR}" &>/dev/null || die
 	epatch "${FILESDIR}"/gcc-compile-with-newer-gcc.patch
+	popd &>/dev/null || die
 }
