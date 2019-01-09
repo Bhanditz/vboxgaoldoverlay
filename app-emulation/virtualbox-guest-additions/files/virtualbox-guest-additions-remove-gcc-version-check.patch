@@ -1,0 +1,13 @@
+--- configure	2019-01-09 11:58:49.126710779 +0000
++++ configure	2019-01-09 11:58:49.126710779 +0000
+@@ -423,8 +423,8 @@
+         log_failure "cannot execute '$CXX -dumpversion'"
+         fail really
+       fi
+-      cc_maj=`echo $cc_ver|cut -d. -f1`
+-      cc_min=`echo $cc_ver|cut -d. -f2`
++      cc_maj="5"
++      cc_min="3"
+       if [ "x$cc_ver" != "x$cxx_ver" ]; then
+         log_failure "gcc version $cc_ver does not match g++ version $cxx_ver"
+         fail really
