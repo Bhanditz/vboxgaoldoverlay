@@ -70,8 +70,10 @@ src_unpack() {
 
 src_prepare() {
 	# PaX fixes (see bug #298988)
+	# Also gcc version pinning removal
 	pushd "${WORKDIR}" &>/dev/null || die
 	epatch "${FILESDIR}"/vboxguest-4.1.0-log-use-c99.patch
+	epatch "${FILESDIR}"/virtualbox-guest-additions-remove-gcc-version-check.patch
 	popd &>/dev/null || die
 
 	# Disable things unused or splitted into separate ebuilds
