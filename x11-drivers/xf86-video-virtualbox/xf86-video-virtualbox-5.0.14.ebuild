@@ -85,6 +85,9 @@ src_prepare() {
 	# remove gcc version check in configure
 	epatch "${FILESDIR}/${PN}-5.0.14-configure-remove-gcc-version-check.patch"
 
+	# fix bug #579946
+	epatch "${FILESDIR}/${PN}-5.1.22-sysmacros.patch"
+ 
 	# link with lazy on hardened #394757
 	sed -i '/^TEMPLATE_VBOXR3EXE_LDFLAGS.linux/s/$/ -Wl,-z,lazy/' Config.kmk || die
 }
